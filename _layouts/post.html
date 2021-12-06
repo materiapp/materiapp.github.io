@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+    <main>
+      {% include post_header.html %}
+      <article>
+        <div class="meta">
+          <h1 class="title">
+            {{page.title}}
+          </h1>
+          <!-- Look the author details up from the site config. -->
+          {% assign author = site.data.authors[page.author] %}
+          <!-- Output author details if some exist. -->
+          {% if author %}
+          <small>{{author.name}} — {{page.date|date_to_string}}</small>
+          {% else %}
+          <small>{{page.date|date_to_string}}</small>
+          {% endif %}
+        </div>
+        <div class="content">
+          {{content}}
+        </div>
+      </article>
+      {% include footer.html %}
+    </main>
+  </body>
+</html>

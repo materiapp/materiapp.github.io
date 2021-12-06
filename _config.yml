@@ -1,0 +1,29 @@
+title: Construindo com você
+markdown: kramdown
+url: "https://blog.materiapp.com"
+baseurl: ""
+homepage: "https://materiapp.com"
+instagram: "https://instagram.com/usemateriapp"
+linkedin: "https://linkedin.com/company/materiapp"
+
+owner: Materiapp OÜ
+email: general@materiapp.com
+image: "assets/img/res/logo.png"
+subject: Artigos produzidos pela equipe do Materiapp, com foco no setor da construção civil
+
+plugins:
+  - jemoji
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "post"
+  - scope:
+      path: "_posts"
+    values:
+      layout: "post"
+      permalink: /posts/:categories/:year/:month/:day/:title/
